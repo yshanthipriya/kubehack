@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "akshackcluster-18c3"
+    labels:
+        app: "akshackcluster-18c3"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: akshackcluster300a-akshackcluster-18c3.6b1b4250b02d4c7fa934.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "akshackcluster-18c3"
+                servicePort: 3009
